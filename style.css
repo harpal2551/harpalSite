@@ -1,0 +1,571 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:black;
+color:white;
+}
+
+/* NAVBAR */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+position:absolute;
+width:100%;
+z-index:100;
+}
+
+.navbar{
+display:flex;
+gap:25px;
+}
+
+.navbar a{
+color:white;
+text-decoration:none;
+}
+
+.menu-btn{
+display:none;
+font-size:22px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background: url('./bg.mp4');
+/* background:url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") center/cover; */
+display:flex;
+align-items:center;
+padding:0 8%;
+}
+
+.bg-video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+z-index:-1;
+opacity: 0.2;
+}
+
+.hero h1{
+font-size:60px;
+max-width:600px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 30px;
+background:#9bd18c;
+color:black;
+text-decoration:none;
+border-radius:4px;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+padding:100px 8%;
+}
+
+.about-left{
+    font-size: 5vh;
+    /* border: 2px solid red; */
+}
+.about-right{
+    /* border: 2px solid green; */
+}
+.about-right p{
+    /* font-size: 2vh; */
+}
+/* FEATURES */
+.imageSize{
+    height: 30vh;
+}
+.feature p{
+    font-weight: 300;
+}
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+padding:60px 8%;
+}
+
+/* SERVICES */
+
+.services{
+text-align:center;
+padding:100px 8%;
+}
+
+.service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:40px;
+}
+
+.card img{
+width:100%;
+border-radius:6px;
+}
+
+/* WORK */
+
+.work{
+padding:100px 8%;
+text-align:center;
+}
+
+.work-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+margin:40px 0;
+}
+.video-card{
+    /* border: 2px solid red; */
+    height: 50vh;
+}
+.video-card img{
+width:100%;
+height: 100%;
+border-radius:6px;
+}
+
+/* CONTACT */
+
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+padding:100px 8%;
+}
+.contact-left{
+    /* border: 2px solid red; */
+}
+.contact-left h2, p{
+    margin-bottom: 2vh;
+}
+.infoName{
+    font-weight: 100;
+}
+.contact-right input,
+.contact-right textarea{
+
+width:100%;
+padding:12px;
+margin-bottom:15px;
+background:black;
+border:1px solid gray;
+color:white;
+
+}
+
+/* FOOTER */
+
+footer{
+padding:40px 8%;
+display:flex;
+justify-content:space-between;
+border-top:1px solid gray;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.service-grid,
+.work-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.about,
+.contact{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:40px;
+}
+
+}
+
+@media(max-width:600px){
+
+.menu-btn{
+display:block;
+}
+
+.navbar{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:black;
+flex-direction:column;
+align-items:center;
+display:none;
+padding:20px 0;
+}
+
+.navbar.active{
+display:flex;
+}
+
+.service-grid,
+.work-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+}
+
+
+/* From Uiverse.io by eslam-hany */ 
+.book {
+    /* border: 2px solid red; */
+  position: relative;
+  border-radius: 10px;
+  width: 350px;
+  height: 300px;
+  background-color: whitesmoke;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  -webkit-transform: preserve-3d;
+  -ms-transform: preserve-3d;
+  transform: preserve-3d;
+  -webkit-perspective: 2000px;
+  perspective: 2000px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  background-color: lightgray;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform-origin: 0;
+  -ms-transform-origin: 0;
+  transform-origin: 0;
+  -webkit-box-shadow: 1px 1px 12px #000;
+  box-shadow: 1px 1px 12px #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.cover img{
+    width: 100%;
+    height: 100%;
+}
+
+.book:hover .cover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: rotatey(95deg);
+  -ms-transform: rotatey(95deg);
+  transform: rotatey(95deg);
+}
+.driveFolderBtn{
+    margin-top: 3vh;
+    padding: 0vh 2vh;
+    border-radius: 3vh;
+    background-color: rgb(56, 146, 59);
+    border: transparent;
+    color: white;
+    font-weight: 800;
+    font-size: 3vh;
+}
+p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.vid-play-landscape-div{
+    /* border: 2px solid red; */
+    height: 80vh;
+    width: 50vh;
+}
+.vid-play-landscape-div .video-play-show{
+    height: 100%;
+    width: 100%;
+}
+.work-grid-video{
+    /* border: 2px solid green; */
+}
+.editingDiv{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center; 
+}
+.editingToolsDiv{
+    /* border: 2px solid red; */
+    /* width: 100%; */
+    width: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: row; */
+    justify-content: center;   /* icons center */
+    gap: clamp(80px,3vw,25px);
+    /* justify-content: space-between; */
+}
+.editingToolsDiv img{
+    /* width: 50%; */
+    /* border: 2px solid white; */
+    /* width: 30vh; */
+    width: clamp(70px, 10vw, 120px);
+    height: auto;
+    object-fit: contain;
+}
+@media (min-width: 300px) and (max-width: 500px){
+    .editingToolsDiv img{
+        width: 15vh;
+    }
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+.c-button {
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 0.9em 1.6em;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+
+.c-button--gooey {
+  color: #385a2f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid #9bd18c;
+  border-radius: 0;
+  position: relative;
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs {
+  height: 100%;
+  filter: url(#goo);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: -3px;
+  right: -1px;
+  z-index: -1;
+}
+
+.c-button--gooey .c-button__blobs div {
+  background-color: #9bd18c;
+  width: 34%;
+  height: 100%;
+  border-radius: 100%;
+  position: absolute;
+  transform: scale(1.4) translateY(125%) translateZ(0);
+  transition: all 700ms ease;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(1) {
+  left: -5%;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(2) {
+  left: 30%;
+  transition-delay: 60ms;
+}
+
+.c-button--gooey .c-button__blobs div:nth-child(3) {
+  left: 66%;
+  transition-delay: 25ms;
+}
+
+.c-button--gooey:hover {
+  /* color: #fff; */
+  color: black;
+}
+
+.c-button--gooey:hover .c-button__blobs div {
+  transform: scale(1.4) translateY(0) translateZ(0);
+}
+.resumeDownloadBtn{
+    background-color: #FFF799;
+    border: transparent;
+    border-radius: 3vh;
+    padding: 1vh 2vh;
+    font-size: 3vh;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+.resumeDownloadBtn:hover{
+    border-radius: 1vh;
+    background-color: #dace52;
+}
+.driveBtnView{
+    border: transparent;
+    background-color: #AEB784;
+    font-weight: 700;
+    font-size: 3vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.headerDownloadBtn{
+    background-color: #1C4D8D;
+    color: white;
+    border: transparent;
+    border-radius: 3vh;
+    padding: 2vh 2vh;
+    font-size: 3vh;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
+}
+.headerDownloadBtn:hover{
+    border-radius: 2vh 4vh;
+    background-color: #1a3558;
+}
+
+
+
+
+
+/* From Uiverse.io by david-mohseni */ 
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  /* background: #fff; */
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper li .linkedinIcon{
+    color: white;
+}
+/* .wrapper li .linkedinIcon:hover{
+    color: #0A66C2;
+} */
+.wrapper .icon:hover{
+    border: transparent;
+}
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  /* background: #fff; */
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  border: 2px solid white;
+  /* background: #fff; */
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
